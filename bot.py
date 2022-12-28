@@ -15,7 +15,7 @@ except ImportError:
         print("Не обнаружен токен во временной переменной")
         exit()
     
-bot = telebot.TeleBot(token)
+bot = telebot.TeleBot("5587741514:AAF0e7hu_UyCtTFGQFLIyjnwJwCeSyXObUw")
 
 
 @bot.message_handler(content_types=["photo"])

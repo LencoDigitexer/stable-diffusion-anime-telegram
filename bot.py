@@ -3,9 +3,9 @@ import requests
 import base64
 from stablediff import get_ai_image
 import os
-'''
-token = ""
 
+token = "5587741514:AAF0e7hu_UyCtTFGQFLIyjnwJwCeSyXObUw"
+'''
 try:
     from config import token
 except ImportError:
@@ -16,7 +16,7 @@ except ImportError:
         exit()
         '''
     
-bot = telebot.TeleBot("5587741514:AAF0e7hu_UyCtTFGQFLIyjnwJwCeSyXObUw")
+bot = telebot.TeleBot(token)
 
 
 @bot.message_handler(content_types=["photo"])

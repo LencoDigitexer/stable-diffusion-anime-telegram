@@ -2,9 +2,17 @@ import telebot
 import requests
 import base64
 from stablediff import get_ai_image
+import os
 
-from config import token
-
+try:
+    from config import token
+except ImportError:
+    if os.environ('token'):
+        token = os.environ('token')
+    else:
+        print("Не обнаружен токен во временной переменной")
+        exit()
+    
 bot = telebot.TeleBot(token)
 
 

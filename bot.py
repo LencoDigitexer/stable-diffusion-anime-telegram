@@ -7,8 +7,8 @@ import os
 try:
     from config import token
 except ImportError:
-    if os.environ('token'):
-        token = os.environ('token')
+    if os.environ.get('token'):
+        token = os.environ.get('token')
     else:
         print("Не обнаружен токен во временной переменной")
         exit()

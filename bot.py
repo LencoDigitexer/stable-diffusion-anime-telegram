@@ -28,9 +28,11 @@ def start(message):
     base64_image_string = base64.b64encode(r.content).decode("utf-8")
 
     # Получаем ссылку на обработанное изображение
-    ai_image = get_ai_image(base64_image_string)["media_info_list"][0]["media_data"]
-
-    bot.send_photo(message.from_user.id, ai_image)
+    try:
+        ai_image = get_ai_image(base64_image_string)["media_info_list"][0]["media_data"]
+        bot.send_photo(message.from_user.id, ai_image)
+    except:
+        bot.send_message(message.from_user.id, "🚨 Произошла ошибка, попробуйте еще раз")
 
 
 bot.polling(none_stop=True, interval=0)

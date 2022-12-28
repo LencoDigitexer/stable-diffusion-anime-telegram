@@ -4,6 +4,8 @@ import base64
 from stablediff import get_ai_image
 import os
 
+token = ""
+
 try:
     from config import token
 except ImportError:

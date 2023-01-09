@@ -3,6 +3,9 @@
 - Find it on Telegram as [Stable Diffusion Anime](https://t.me/stablediffusion_api_bot)
 
 
+![image](https://user-images.githubusercontent.com/44779327/211309737-ba74bc96-0bcd-4011-97f3-36586debc126.png)
+
+
 ## Features
 - [X] Simple image processing.
 
